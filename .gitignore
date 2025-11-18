@@ -1,3 +1,13 @@
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+*.csv
+*.ipynb_checkpoints/
+.env
+*.db
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
