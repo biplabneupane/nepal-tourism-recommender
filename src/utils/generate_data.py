@@ -224,10 +224,9 @@ def generate_attractions_data(num_attractions=50):
         
         attractions.append(attraction)
     
-    # Convert list of dictionaries to DataFrame (table)
     df = pd.DataFrame(attractions)
     
-    print(f"✅ Created {len(df)} attractions")
+    print(f"... Created {len(df)} attractions")
     return df
 
 
@@ -277,31 +276,15 @@ def generate_user_ratings(attractions_df, num_users=200, avg_ratings_per_user=14
     
     ratings_df = pd.DataFrame(ratings)
     
-    print(f"✅ Created {len(ratings_df)} ratings")
-    print(f"   Average: {len(ratings_df)/num_users:.1f} ratings per user")
+    print(f"... Created {len(ratings_df)} ratings")
+    print(f" ... Average: {len(ratings_df)/num_users:.1f} ratings per user")
     
     return ratings_df
 
 
 def generate_user_preferences(num_users=200):
-    """
-    Generate user preference profiles.
     
-    This gives each user characteristics like age, budget, fitness level.
-    Useful for future personalized recommendations.
-    
-    Parameters:
-    -----------
-    num_users : int
-        Number of user profiles to create
-    
-    Returns:
-    --------
-    DataFrame
-        User profiles with preferences
-    """
-    
-    print(f"📋 Generating {num_users} user profiles...")
+    print(f"... Generating {num_users} user profiles...")
     
     categories = [
         'Trekking', 'Cultural Heritage', 'Nature & Wildlife', 
@@ -324,19 +307,14 @@ def generate_user_preferences(num_users=200):
     
     users_df = pd.DataFrame(users)
     
-    print(f"✅ Created {len(users_df)} user profiles")
+    print(f"Success! Created {len(users_df)} user profiles")
     
     return users_df
 
 
 def main():
-    """
-    Main function - runs when script is executed.
-    Generates all data and saves to CSV files.
-    """
     
     print("\n" + "="*60)
-    print("🇳🇵  Nepal Tourism Dataset Generator")
     print("="*60 + "\n")
     
     # Generate all three datasets
@@ -345,7 +323,7 @@ def main():
     users_df = generate_user_preferences(num_users=200)
     
     print("\n" + "="*60)
-    print("💾 Saving data to CSV files...")
+    # print(" Saving data to CSV files...")
     print("="*60 + "\n")
     
     # Save to CSV files in data/processed/ folder
@@ -353,13 +331,13 @@ def main():
     ratings_df.to_csv('data/processed/user_ratings.csv', index=False)
     users_df.to_csv('data/processed/users.csv', index=False)
     
-    print("✅ Saved: data/processed/attractions.csv")
-    print("✅ Saved: data/processed/user_ratings.csv")
-    print("✅ Saved: data/processed/users.csv")
+    # print(" Saved: data/processed/attractions.csv")
+    # print(" Saved: data/processed/user_ratings.csv")
+    # print(" Saved: data/processed/users.csv")
     
     # Display summary statistics
     print("\n" + "="*60)
-    print("📊 Dataset Summary")
+    print("Dataset Summary")
     print("="*60 + "\n")
     
     print(f"Total Attractions: {len(attractions_df)}")
@@ -378,7 +356,7 @@ def main():
         print(f"  • {region}: {count}")
     
     print("\n" + "="*60)
-    print("🎉 Data generation complete!")
+    # print("Success!!!! Data generation complete!")
     print("="*60 + "\n")
     
     # Show sample attractions
@@ -387,12 +365,6 @@ def main():
     sample = attractions_df[['name', 'category', 'rating', 'avg_cost_usd', 'difficulty']].head(10)
     print(sample.to_string(index=False))
     
-    print("\n✨ Next steps:")
-    print("  1. Explore the data: jupyter notebook notebooks/01_data_exploration.ipynb")
-    print("  2. Build recommender: Create src/recommender/content_based.py")
-    print("  3. Test it: python demo.py")
 
-
-# This runs when you execute: python generate_data.py
 if __name__ == '__main__':
     main()
