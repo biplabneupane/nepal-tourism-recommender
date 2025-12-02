@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Nepal Recommender</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1>Your Trip Recommender For Nepal</h1>
+            <p class="tagline">Discover Your Perfect Adventure in Nepal</p>
+        </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <div class="container">
+        <div class="tabs">
+            <button class="tab-btn active" onclick="showTab('browse')">Browse Attractions</button>
+            <button class="tab-btn" onclick="showTab('similar')">Find Similar</button>
+            <button class="tab-btn" onclick="showTab('preferences')">By Preferences</button>
+            <button class="tab-btn" onclick="showTab('stats')">Statistics</button>
+        </div>
+    </div>
+
+    <!-- Tab Content -->
+    <div class="container">
+        
+        <!-- Browse Attractions Tab -->
+        <div id="browse-tab" class="tab-content active">
+            <h2>Browse All Attractions</h2>
+            
+            <!-- Filters -->
+            <div class="filters">
+                <div class="filter-group">
+                    <label>Category</label>
+                    <select id="filter-category">
+                        <option value="">All Categories</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label>Region</label>
+                    <select id="filter-region">
+                        <option value="">All Regions</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label>Max Cost (USD)</label>
+                    <input type="number" id="filter-cost" placeholder="Any">
+                </div>
+                
+                <div class="filter-group">
+                    <label>Min Rating</label>
+                    <input type="number" id="filter-rating" min="1" max="5" step="0.1" placeholder="Any">
+                </div>
+                
+                <button class="btn btn-primary" onclick="applyFilters()">Apply Filters</button>
+                <button class="btn btn-secondary" onclick="clearFilters()">Clear</button>
+            </div>
+            
+            <!-- Results -->
+            <div id="browse-results" class="attractions-grid"></div>
+        </div>
+
+        <!-- Find Similar Tab -->
+        <div id="similar-tab" class="tab-content">
+            <h2>Find Similar Attractions</h2>
+            
+            <div class="search-section">
+                <label>Select an attraction:</label>
+                <select id="similar-attraction" class="large-select">
+                    <option value="">Choose an attraction...</option>
+                </select>
+                
+                <label>Number of recommendations:</label>
+                <input type="number" id="similar-count" value="5" min="1" max="10">
+                
+                <button class="btn btn-primary" onclick="findSimilar()">Find Similar</button>
+            </div>
+            
+            <div id="similar-original" class="original-card"></div>
+            <div id="similar-results" class="attractions-grid"></div>
+        </div>
+
+        <!-- By Preferences Tab -->
+        <div id="preferences-tab" class="tab-content">
+            <h2>Get Recommendations by Your Preferences</h2>
+            
+            <div class="preferences-form">
+                <div class="form-group">
+                    <label>I'm interested in:</label>
+                    <select id="pref-category">
+                        <option value="">Any Category</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>My budget (per attraction):</label>
+                    <input type="number" id="pref-budget" placeholder="Enter max budget in USD">
+                </div>
+                
+                <div class="form-group">
+                    <label>Difficulty level:</label>
+                    <select id="pref-difficulty">
+                        <option value="">Any Difficulty</option>
+                        <option value="Easy">Easy</option>
+                        <option value="Easy-Moderate">Easy-Moderate</option>
+                        <option value="Moderate">Moderate</option>
+                        <option value="Moderate-Hard">Moderate-Hard</option>
+                        <option value="Hard">Hard</option>
+                        <option value="Extreme">Extreme</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Number of recommendations:</label>
+                    <input type="number" id="pref-count" value="10" min="1" max="20">
+                </div>
+                
+                <button class="btn btn-primary" onclick="getPreferenceRecommendations()">
+                    Get Recommendations
+                </button>
+            </div>
+            
+            <div id="preferences-results" class="attractions-grid"></div>
+        </div>
+
+        <!-- Statistics Tab -->
+        <div id="stats-tab" class="tab-content">
+            <h2>Dataset Statistics</h2>
+            <div id="stats-content" class="stats-grid"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Nepal Travel Recommender</p>
+            <a href="https://biplabn.com.np" style="text-decoration: none;" target="_blank">By Biplab Neupane</a>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div id="loading" class="loading-overlay" style="display: none;">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
