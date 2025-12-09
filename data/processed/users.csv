@@ -1,0 +1,201 @@
+user_id,age_group,budget_level,fitness_level,preferred_category,travel_style,origin_country
+0,18-25,Budget,Low,Adventure Sports,Family,UK
+1,46-60,Mid-range,Low,Nature & Wildlife,Family,France
+2,46-60,Budget,High,Nature & Wildlife,Family,Germany
+3,36-45,Mid-range,High,Trekking,Family,UK
+4,60+,Budget,Low,Cultural Heritage,Family,India
+5,46-60,Budget,Low,Nature & Wildlife,Solo,India
+6,36-45,Mid-range,High,Trekking,Solo,USA
+7,18-25,Mid-range,High,Adventure Sports,Solo,China
+8,46-60,Budget,High,Cultural Heritage,Couple,Japan
+9,46-60,Mid-range,Medium,Trekking,Family,China
+10,18-25,Mid-range,Low,Cultural Heritage,Family,UK
+11,18-25,Luxury,Medium,Nature & Wildlife,Solo,India
+12,18-25,Mid-range,Medium,Religious Site,Couple,Japan
+13,46-60,Luxury,Medium,Religious Site,Couple,USA
+14,46-60,Luxury,High,Religious Site,Couple,Australia
+15,60+,Luxury,High,Cultural Heritage,Group,USA
+16,46-60,Luxury,Low,Trekking,Group,UK
+17,18-25,Mid-range,Medium,Religious Site,Solo,Japan
+18,46-60,Budget,Medium,Cultural Heritage,Solo,Germany
+19,26-35,Luxury,High,Religious Site,Family,India
+20,36-45,Mid-range,Medium,Adventure Sports,Family,Australia
+21,60+,Mid-range,Low,Cultural Heritage,Couple,France
+22,46-60,Mid-range,High,Religious Site,Family,India
+23,46-60,Budget,Low,Religious Site,Couple,India
+24,46-60,Mid-range,High,Adventure Sports,Couple,China
+25,26-35,Budget,Medium,Religious Site,Solo,France
+26,46-60,Budget,Low,Religious Site,Family,China
+27,18-25,Luxury,Low,Cultural Heritage,Group,Australia
+28,60+,Luxury,Low,Religious Site,Couple,Germany
+29,60+,Budget,High,Cultural Heritage,Family,Japan
+30,18-25,Mid-range,High,Religious Site,Couple,USA
+31,60+,Budget,Medium,Religious Site,Couple,UK
+32,36-45,Mid-range,Low,Trekking,Solo,USA
+33,60+,Mid-range,Low,Adventure Sports,Group,Germany
+34,18-25,Budget,Low,Religious Site,Family,USA
+35,26-35,Luxury,High,Nature & Wildlife,Group,Germany
+36,18-25,Luxury,Medium,Religious Site,Couple,USA
+37,18-25,Luxury,High,Cultural Heritage,Couple,India
+38,36-45,Budget,Low,Cultural Heritage,Family,Japan
+39,26-35,Budget,Medium,Trekking,Family,Japan
+40,26-35,Luxury,Medium,Cultural Heritage,Couple,UK
+41,36-45,Luxury,Low,Cultural Heritage,Group,Japan
+42,18-25,Luxury,Low,Nature & Wildlife,Group,Germany
+43,60+,Budget,Low,Trekking,Couple,India
+44,46-60,Budget,Medium,Cultural Heritage,Couple,India
+45,46-60,Mid-range,High,Nature & Wildlife,Group,UK
+46,26-35,Mid-range,High,Trekking,Family,UK
+47,60+,Budget,Medium,Trekking,Solo,France
+48,18-25,Luxury,Low,Religious Site,Couple,Japan
+49,18-25,Luxury,High,Religious Site,Solo,Japan
+50,60+,Luxury,Low,Trekking,Couple,Germany
+51,26-35,Mid-range,Low,Cultural Heritage,Solo,France
+52,36-45,Luxury,Medium,Cultural Heritage,Family,China
+53,46-60,Luxury,High,Nature & Wildlife,Group,Australia
+54,18-25,Mid-range,Medium,Adventure Sports,Group,Japan
+55,18-25,Mid-range,Low,Cultural Heritage,Family,France
+56,36-45,Luxury,Low,Adventure Sports,Solo,Japan
+57,18-25,Budget,Medium,Religious Site,Couple,China
+58,60+,Luxury,High,Cultural Heritage,Couple,UK
+59,36-45,Mid-range,High,Religious Site,Couple,India
+60,26-35,Mid-range,High,Adventure Sports,Family,Germany
+61,36-45,Mid-range,Low,Religious Site,Couple,Germany
+62,18-25,Luxury,Medium,Religious Site,Solo,India
+63,46-60,Luxury,Low,Adventure Sports,Group,UK
+64,18-25,Budget,Low,Nature & Wildlife,Solo,China
+65,26-35,Mid-range,Medium,Adventure Sports,Family,USA
+66,60+,Mid-range,Low,Nature & Wildlife,Family,France
+67,60+,Budget,Low,Trekking,Couple,Australia
+68,26-35,Luxury,Medium,Trekking,Group,UK
+69,60+,Budget,Medium,Religious Site,Couple,Japan
+70,36-45,Luxury,High,Cultural Heritage,Family,UK
+71,18-25,Luxury,Low,Religious Site,Couple,France
+72,26-35,Luxury,High,Adventure Sports,Couple,Japan
+73,26-35,Mid-range,Medium,Cultural Heritage,Solo,France
+74,18-25,Mid-range,Medium,Adventure Sports,Family,Japan
+75,36-45,Budget,High,Adventure Sports,Solo,Germany
+76,36-45,Luxury,Medium,Cultural Heritage,Group,UK
+77,18-25,Luxury,Low,Nature & Wildlife,Group,China
+78,60+,Budget,High,Cultural Heritage,Couple,UK
+79,36-45,Mid-range,Medium,Religious Site,Family,China
+80,18-25,Mid-range,High,Nature & Wildlife,Couple,USA
+81,60+,Budget,High,Cultural Heritage,Couple,France
+82,26-35,Mid-range,Low,Cultural Heritage,Couple,France
+83,36-45,Budget,High,Adventure Sports,Group,USA
+84,60+,Mid-range,Low,Nature & Wildlife,Family,France
+85,60+,Budget,Medium,Trekking,Solo,Japan
+86,26-35,Budget,Low,Adventure Sports,Solo,Germany
+87,18-25,Luxury,Medium,Nature & Wildlife,Family,USA
+88,46-60,Budget,Medium,Trekking,Solo,Japan
+89,46-60,Luxury,Medium,Trekking,Family,India
+90,60+,Budget,High,Adventure Sports,Solo,China
+91,18-25,Luxury,Medium,Nature & Wildlife,Group,Germany
+92,36-45,Luxury,Medium,Adventure Sports,Group,UK
+93,36-45,Budget,Low,Trekking,Group,China
+94,26-35,Mid-range,Medium,Cultural Heritage,Family,China
+95,18-25,Luxury,Medium,Cultural Heritage,Family,USA
+96,46-60,Budget,Medium,Cultural Heritage,Couple,UK
+97,18-25,Luxury,Low,Religious Site,Group,India
+98,26-35,Mid-range,High,Religious Site,Couple,Australia
+99,26-35,Mid-range,Medium,Trekking,Family,UK
+100,26-35,Budget,Low,Adventure Sports,Group,UK
+101,46-60,Luxury,Low,Trekking,Solo,India
+102,18-25,Mid-range,Low,Nature & Wildlife,Family,Germany
+103,60+,Budget,Medium,Nature & Wildlife,Family,China
+104,36-45,Luxury,Medium,Religious Site,Family,China
+105,26-35,Luxury,Low,Nature & Wildlife,Family,Japan
+106,26-35,Budget,High,Nature & Wildlife,Family,India
+107,36-45,Budget,Medium,Religious Site,Couple,Germany
+108,46-60,Mid-range,Low,Cultural Heritage,Family,France
+109,36-45,Mid-range,Medium,Religious Site,Group,Australia
+110,60+,Mid-range,High,Adventure Sports,Solo,USA
+111,26-35,Budget,Medium,Adventure Sports,Couple,Japan
+112,60+,Luxury,High,Trekking,Couple,UK
+113,26-35,Luxury,High,Cultural Heritage,Couple,UK
+114,18-25,Budget,Low,Cultural Heritage,Solo,UK
+115,18-25,Budget,Medium,Trekking,Solo,Japan
+116,46-60,Mid-range,Medium,Adventure Sports,Family,Germany
+117,46-60,Budget,Low,Religious Site,Group,Australia
+118,60+,Budget,Medium,Cultural Heritage,Group,India
+119,26-35,Budget,High,Trekking,Solo,UK
+120,18-25,Mid-range,Low,Nature & Wildlife,Solo,UK
+121,60+,Mid-range,Medium,Nature & Wildlife,Couple,India
+122,36-45,Budget,High,Cultural Heritage,Group,Germany
+123,60+,Luxury,High,Cultural Heritage,Solo,USA
+124,60+,Budget,Medium,Adventure Sports,Group,Japan
+125,60+,Budget,Medium,Adventure Sports,Couple,India
+126,18-25,Mid-range,Low,Trekking,Group,China
+127,26-35,Luxury,Low,Nature & Wildlife,Couple,Japan
+128,18-25,Mid-range,Medium,Cultural Heritage,Solo,India
+129,36-45,Budget,Low,Trekking,Couple,China
+130,60+,Luxury,Medium,Nature & Wildlife,Group,UK
+131,36-45,Mid-range,Low,Adventure Sports,Group,UK
+132,26-35,Budget,Low,Cultural Heritage,Group,Japan
+133,60+,Luxury,Low,Cultural Heritage,Group,UK
+134,18-25,Mid-range,Low,Cultural Heritage,Family,USA
+135,18-25,Luxury,Medium,Adventure Sports,Family,Australia
+136,18-25,Mid-range,Medium,Cultural Heritage,Couple,Germany
+137,36-45,Budget,High,Adventure Sports,Group,China
+138,26-35,Luxury,Low,Cultural Heritage,Couple,France
+139,18-25,Budget,High,Trekking,Couple,USA
+140,26-35,Luxury,Low,Cultural Heritage,Group,France
+141,46-60,Luxury,Low,Cultural Heritage,Group,USA
+142,26-35,Luxury,Low,Religious Site,Family,USA
+143,46-60,Budget,Medium,Religious Site,Solo,USA
+144,18-25,Budget,Medium,Adventure Sports,Couple,USA
+145,60+,Luxury,High,Adventure Sports,Couple,USA
+146,36-45,Budget,High,Adventure Sports,Group,Australia
+147,26-35,Luxury,High,Nature & Wildlife,Couple,Australia
+148,26-35,Budget,Medium,Cultural Heritage,Family,Germany
+149,18-25,Mid-range,Medium,Trekking,Family,Australia
+150,60+,Budget,Medium,Trekking,Solo,India
+151,26-35,Mid-range,Medium,Trekking,Solo,India
+152,26-35,Mid-range,Low,Nature & Wildlife,Solo,Germany
+153,60+,Mid-range,Medium,Cultural Heritage,Couple,Australia
+154,46-60,Luxury,High,Nature & Wildlife,Group,Australia
+155,26-35,Luxury,Medium,Nature & Wildlife,Group,Japan
+156,46-60,Budget,High,Nature & Wildlife,Solo,Germany
+157,36-45,Luxury,Medium,Adventure Sports,Family,Japan
+158,18-25,Mid-range,Medium,Religious Site,Group,China
+159,18-25,Mid-range,Medium,Nature & Wildlife,Solo,France
+160,46-60,Budget,High,Cultural Heritage,Group,USA
+161,60+,Budget,Low,Religious Site,Group,UK
+162,26-35,Luxury,Medium,Nature & Wildlife,Couple,Germany
+163,36-45,Budget,Medium,Nature & Wildlife,Couple,Japan
+164,36-45,Budget,High,Adventure Sports,Couple,France
+165,18-25,Budget,High,Trekking,Group,USA
+166,18-25,Mid-range,Medium,Adventure Sports,Family,Japan
+167,36-45,Mid-range,High,Trekking,Group,India
+168,46-60,Mid-range,Medium,Adventure Sports,Couple,UK
+169,36-45,Mid-range,High,Religious Site,Couple,UK
+170,46-60,Luxury,High,Adventure Sports,Group,Australia
+171,18-25,Luxury,High,Cultural Heritage,Group,India
+172,18-25,Mid-range,High,Nature & Wildlife,Couple,Germany
+173,26-35,Budget,Low,Religious Site,Family,UK
+174,46-60,Luxury,High,Religious Site,Couple,Australia
+175,18-25,Budget,High,Cultural Heritage,Solo,France
+176,60+,Budget,Medium,Nature & Wildlife,Family,Australia
+177,26-35,Mid-range,Low,Cultural Heritage,Group,UK
+178,36-45,Budget,Low,Cultural Heritage,Family,China
+179,60+,Luxury,Low,Nature & Wildlife,Couple,India
+180,26-35,Budget,Low,Religious Site,Couple,USA
+181,18-25,Luxury,High,Adventure Sports,Group,China
+182,60+,Luxury,Medium,Religious Site,Solo,Australia
+183,60+,Mid-range,High,Trekking,Couple,France
+184,46-60,Mid-range,High,Religious Site,Couple,Japan
+185,36-45,Luxury,High,Nature & Wildlife,Family,Japan
+186,46-60,Luxury,High,Nature & Wildlife,Couple,China
+187,46-60,Budget,High,Cultural Heritage,Group,UK
+188,26-35,Mid-range,Low,Religious Site,Couple,USA
+189,18-25,Luxury,High,Religious Site,Family,Germany
+190,46-60,Mid-range,High,Trekking,Solo,China
+191,36-45,Luxury,Low,Nature & Wildlife,Couple,India
+192,60+,Mid-range,Low,Trekking,Couple,USA
+193,36-45,Luxury,Low,Adventure Sports,Family,Australia
+194,36-45,Mid-range,Medium,Nature & Wildlife,Solo,India
+195,60+,Luxury,High,Cultural Heritage,Solo,China
+196,46-60,Budget,Low,Religious Site,Group,USA
+197,60+,Mid-range,High,Trekking,Solo,India
+198,26-35,Mid-range,Medium,Cultural Heritage,Group,Japan
+199,46-60,Luxury,Medium,Trekking,Family,Germany

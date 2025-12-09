@@ -1,0 +1,50 @@
+attraction_id,name,category,region,rating,num_reviews,avg_cost_usd,duration_days,difficulty,best_season,altitude_meters,description
+0,Mount Everest Base Camp Trek,Trekking,Everest Region,3.4,73,1360,10.0,Hard,Spring,4087,A hard trekking experience in Everest Region.
+1,Annapurna Circuit,Trekking,Annapurna Region,3.9,50,1371,10.0,Moderate,Autumn,2955,A moderate trekking experience in Annapurna Region.
+2,Langtang Trek,Trekking,Langtang Region,3.0,110,959,7.0,Moderate,Autumn,2975,A moderate trekking experience in Langtang Region.
+3,Manaslu Circuit,Trekking,Chitwan,3.0,836,1457,20.0,Hard,Spring,2646,A hard trekking experience in Chitwan.
+4,Upper Mustang Trek,Trekking,Mustang Region,3.7,155,773,13.0,Moderate,Autumn,4139,A moderate trekking experience in Mustang Region.
+5,Gokyo Lakes Trek,Trekking,Lumbini,4.0,484,954,18.0,Hard,Autumn,3021,A hard trekking experience in Lumbini.
+6,Kathmandu Durbar Square,Cultural Heritage,Kathmandu Valley,3.5,1172,36,1.0,Easy,Year-round,1495,A easy cultural heritage experience in Kathmandu Valley.
+7,Patan Durbar Square,Cultural Heritage,Kathmandu Valley,3.0,1349,28,1.0,Easy,Year-round,1219,A easy cultural heritage experience in Kathmandu Valley.
+8,Bhaktapur Durbar Square,Cultural Heritage,Kathmandu Valley,4.5,362,27,1.0,Easy,Year-round,1564,A easy cultural heritage experience in Kathmandu Valley.
+9,Swayambhunath (Monkey Temple),Religious Site,Mustang Region,3.8,80,38,1.0,Easy,Year-round,730,A easy religious site experience in Mustang Region.
+10,Boudhanath Stupa,Religious Site,Everest Region,3.6,198,37,1.0,Easy,Year-round,1304,A easy religious site experience in Everest Region.
+11,Pashupatinath Temple,Religious Site,Manaslu Region,4.0,168,49,1.0,Easy,Year-round,1294,A easy religious site experience in Manaslu Region.
+12,Lumbini (Buddha Birthplace),Religious Site,Far West Nepal,4.2,334,24,1.0,Easy,Year-round,984,A easy religious site experience in Far West Nepal.
+13,Pokhara Lakeside,Nature & Wildlife,Annapurna Region,3.9,899,192,5.0,Hard,Autumn,1181,A hard nature & wildlife experience in Annapurna Region.
+14,Chitwan National Park,Historical Site,Chitwan,3.7,102,845,6.0,Hard,Winter,1996,A hard historical site experience in Chitwan.
+15,Rara Lake,Nature & Wildlife,Manaslu Region,3.2,52,274,6.0,Hard,Spring,1979,A hard nature & wildlife experience in Manaslu Region.
+16,Phewa Lake,Nature & Wildlife,Kathmandu Valley,4.4,376,274,5.0,Moderate,Autumn,1636,A moderate nature & wildlife experience in Kathmandu Valley.
+17,Begnas Lake,Nature & Wildlife,Pokhara Region,4.4,174,317,4.0,Moderate,Summer,501,A moderate nature & wildlife experience in Pokhara Region.
+18,Nagarkot Hill Station,Hill Station,Langtang Region,5.0,409,434,1.0,Hard,Autumn,1962,A hard hill station experience in Langtang Region.
+19,Dhulikhel,Trekking,Lumbini,3.8,115,886,8.0,Extreme,Winter,2186,A extreme trekking experience in Lumbini.
+20,Bandipur Village,Nature & Wildlife,Pokhara Region,4.3,1178,981,12.0,Moderate-Hard,Autumn,1050,A moderate-hard nature & wildlife experience in Pokhara Region.
+21,Bungee Jumping (The Last Resort),Adventure Sports,Annapurna Region,4.5,729,80,1.0,Hard,Year-round,1516,A hard adventure sports experience in Annapurna Region.
+22,Paragliding in Pokhara,Adventure Sports,Annapurna Region,4.2,133,192,1.0,Hard,Autumn,1756,A hard adventure sports experience in Annapurna Region.
+23,White Water Rafting Trishuli,Adventure Sports,Lumbini,3.7,1147,98,1.0,Moderate,Year-round,1943,A moderate adventure sports experience in Lumbini.
+24,Gosaikunda Lake,Nature & Wildlife,Annapurna Region,4.1,2128,161,3.0,Moderate,Summer,660,A moderate nature & wildlife experience in Annapurna Region.
+25,Tilicho Lake,Nature & Wildlife,Lumbini,3.0,454,326,6.0,Easy,Autumn,1545,A easy nature & wildlife experience in Lumbini.
+26,Janakpur Temple,Religious Site,Kathmandu Valley,3.2,329,47,1.0,Easy,Year-round,783,A easy religious site experience in Kathmandu Valley.
+27,Bardiya National Park,Adventure Sports,Langtang Region,4.3,909,865,13.0,Moderate-Hard,Autumn,1560,A moderate-hard adventure sports experience in Langtang Region.
+28,Koshi Tappu Wildlife Reserve,Trekking,Pokhara Region,4.3,175,656,5.0,Extreme,Autumn,2127,A extreme trekking experience in Pokhara Region.
+29,Namche Bazaar Market,Market/Shopping,Langtang Region,4.6,189,44,0.5,Easy,Year-round,1284,A easy market/shopping experience in Langtang Region.
+30,Tengboche Monastery,Religious Site,Langtang Region,4.2,267,42,1.0,Easy,Year-round,1420,A easy religious site experience in Langtang Region.
+31,Khumjung Village,Market/Shopping,Pokhara Region,4.0,214,734,4.0,Easy,Winter,1615,A easy market/shopping experience in Pokhara Region.
+32,Lukla Airport Experience,Cultural Heritage,Lumbini,3.9,65,714,3.0,Extreme,Summer,1337,A extreme cultural heritage experience in Lumbini.
+33,Everest View Hotel,Adventure Sports,Everest Region,4.1,353,102,8.0,Easy,Winter,4046,A easy adventure sports experience in Everest Region.
+34,Annapurna Base Camp,Trekking,Annapurna Region,4.2,595,1435,13.0,Hard,Autumn,3369,A hard trekking experience in Annapurna Region.
+35,Poon Hill Sunrise,Adventure Sports,Chitwan,4.7,130,879,5.0,Easy-Moderate,Spring,1760,A easy-moderate adventure sports experience in Chitwan.
+36,Muktinath Temple,Religious Site,Mustang Region,3.8,267,10,1.0,Easy,Year-round,1599,A easy religious site experience in Mustang Region.
+37,Kagbeni Village,Nature & Wildlife,Chitwan,4.3,91,746,6.0,Hard,Year-round,931,A hard nature & wildlife experience in Chitwan.
+38,Jomsom Town,Market/Shopping,Everest Region,3.4,237,303,1.0,Moderate-Hard,Year-round,1261,A moderate-hard market/shopping experience in Everest Region.
+39,Ghandruk Village,Trekking,Kathmandu Valley,4.1,246,565,13.0,Hard,Summer,4427,A hard trekking experience in Kathmandu Valley.
+40,Australian Camp,Trekking,Pokhara Region,3.8,178,476,3.0,Hard,Year-round,2011,A hard trekking experience in Pokhara Region.
+41,Sarangkot Sunrise Point,Nature & Wildlife,Mustang Region,3.5,170,776,3.0,Easy-Moderate,Spring,1719,A easy-moderate nature & wildlife experience in Mustang Region.
+42,World Peace Pagoda,Adventure Sports,Everest Region,3.5,270,124,13.0,Easy-Moderate,Year-round,1419,A easy-moderate adventure sports experience in Everest Region.
+43,Mahendra Cave,Trekking,Annapurna Region,3.4,239,145,4.0,Moderate,Year-round,4109,A moderate trekking experience in Annapurna Region.
+44,Seti River Gorge,Nature & Wildlife,Mustang Region,4.4,1253,236,6.0,Easy,Autumn,1350,A easy nature & wildlife experience in Mustang Region.
+45,Tal Barahi Temple,Religious Site,Manaslu Region,4.5,608,25,1.0,Easy,Year-round,1674,A easy religious site experience in Manaslu Region.
+46,Garden of Dreams,Market/Shopping,Manaslu Region,3.0,99,91,5.0,Hard,Summer,1087,A hard market/shopping experience in Manaslu Region.
+47,Thamel Market,Market/Shopping,Pokhara Region,4.1,150,93,0.5,Easy,Year-round,1916,A easy market/shopping experience in Pokhara Region.
+48,Kopan Monastery,Religious Site,Annapurna Region,3.8,237,36,1.0,Easy,Year-round,1865,A easy religious site experience in Annapurna Region.
