@@ -19,30 +19,50 @@ recommender = None
 
 def initialize_system():
     global attractions_df, recommender
+    import os
+    import pandas as pd
+
+    # Determine absolute path relative to this file
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     data_path = os.path.join(BASE_DIR, 'data', 'processed', 'attractions.csv')
-    
-    print("===== debug: BASE_DIR =", BASE_DIR)
-    print("===== debug: looking for CSV at", data_path)
-    
-    # List files in each directory
+
+    print("===== DEBUG =====")
+    print("BASE_DIR:", BASE_DIR)
+    print("Looking for CSV at:", data_path)
+    print("Exists?", os.path.exists(data_path))
+
+    # List directories for debugging
     try:
         print("Contents of BASE_DIR:", os.listdir(BASE_DIR))
-        print("Contents of data folder:", os.listdir(os.path.join(BASE_DIR, 'data')))
-        print("Contents of processed folder:", os.listdir(os.path.join(BASE_DIR, 'data', 'processed')))
+        if os.path.exists(os.path.join(BASE_DIR, 'data')):
+            print("Contents of data folder:", os.listdir(os.path.join(BASE_DIR, 'data')))
+        if os.path.exists(os.path.join(BASE_DIR, 'data', 'processed')):
+            print("Contents of processed folder:", os.listdir(os.path.join(BASE_DIR, 'data', 'processed')))
     except Exception as e:
         print("Error listing directories:", e)
-    
+
+    # If CSV not found, fail gracefully
     if not os.path.exists(data_path):
-        print("ERROR: CSV file not found!")
-        sys.exit(1)
-    
-    attractions_df = pd.read_csv(data_path)
-    print(f"Loaded {len(attractions_df)} attractions")
-    
-    recommender = ContentBasedRecommender()
-    recommender.fit(attractions_df)
-    print("Model ready!")
+        print("ERROR: CSV file not found! The API will not work.")
+        attractions_df = None
+        return
+
+    try:
+        attractions_df = pd.read_csv(data_path)
+        print(f"Loaded {len(attractions_df)} attractions")
+    except Exception as e:
+        print("ERROR reading CSV:", e)
+        attractions_df = None
+        return
+
+    try:
+        recommender = ContentBasedRecommender()
+        recommender.fit(attractions_df)
+        print("Model ready!")
+    except Exception as e:
+        print("ERROR initializing recommender:", e)
+        recommender = None
+
 
 
 @app.route('/')
