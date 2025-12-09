@@ -21,20 +21,28 @@ def initialize_system():
     global attractions_df, recommender
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     data_path = os.path.join(BASE_DIR, 'data', 'processed', 'attractions.csv')
+    
     print("===== debug: BASE_DIR =", BASE_DIR)
     print("===== debug: looking for CSV at", data_path)
-    print("===== debug: os.listdir(BASE_DIR) →", os.listdir(BASE_DIR))
-    print("===== debug: os.listdir(os.path.join(BASE_DIR, 'data')) →", os.listdir(os.path.join(BASE_DIR, 'data')))
-    print("===== debug: os.listdir(os.path.join(BASE_DIR, 'data', 'processed')) →", os.listdir(os.path.join(BASE_DIR, 'data', 'processed')))
+    
+    # List files in each directory
+    try:
+        print("Contents of BASE_DIR:", os.listdir(BASE_DIR))
+        print("Contents of data folder:", os.listdir(os.path.join(BASE_DIR, 'data')))
+        print("Contents of processed folder:", os.listdir(os.path.join(BASE_DIR, 'data', 'processed')))
+    except Exception as e:
+        print("Error listing directories:", e)
+    
     if not os.path.exists(data_path):
-        print("ERROR: File does not exist on disk!")
+        print("ERROR: CSV file not found!")
         sys.exit(1)
+    
     attractions_df = pd.read_csv(data_path)
     print(f"Loaded {len(attractions_df)} attractions")
+    
     recommender = ContentBasedRecommender()
     recommender.fit(attractions_df)
     print("Model ready!")
-
 
 
 @app.route('/')
