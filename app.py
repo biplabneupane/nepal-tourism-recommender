@@ -64,6 +64,10 @@ def initialize_system():
         recommender = None
 
 
+# Initialize the system immediately when the module is loaded
+# This ensures data loads both in development and production (Gunicorn)
+initialize_system()
+
 
 @app.route('/')
 def home():
@@ -236,5 +240,4 @@ def get_stats():
 
 
 if __name__ == '__main__':
-    initialize_system()
     app.run(debug=True, host='0.0.0.0', port=5000)
