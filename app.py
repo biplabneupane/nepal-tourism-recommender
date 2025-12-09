@@ -23,7 +23,9 @@ def initialize_system():
     
     print("Loading data and training model...")
     try:
-        attractions_df = pd.read_csv('src/data/processed/attractions.csv')
+        BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+        data_path = os.path.join(BASE_DIR, 'data', 'processed', 'attractions.csv')
+        attractions_df = pd.read_csv(data_path)
         print(f"Loaded {len(attractions_df)} attractions")
         
         recommender = ContentBasedRecommender()
@@ -32,11 +34,12 @@ def initialize_system():
         
     except FileNotFoundError as e:
         print(f"Error: Could not find attractions.csv - {e}")
-        print("Please make sure the file is at: data/processed/attractions.csv")
+        print(f"Expected path: {data_path}")
         sys.exit(1)
     except Exception as e:
         print(f"Error initializing system: {e}")
         sys.exit(1)
+
 
 
 @app.route('/')
