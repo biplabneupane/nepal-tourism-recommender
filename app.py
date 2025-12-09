@@ -18,27 +18,22 @@ recommender = None
 
 
 def initialize_system():
-    """Load data and train model at startup."""
     global attractions_df, recommender
-    
-    print("Loading data and training model...")
-    try:
-        BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-        data_path = os.path.join(BASE_DIR, 'data', 'processed', 'attractions.csv')
-        attractions_df = pd.read_csv(data_path)
-        print(f"Loaded {len(attractions_df)} attractions")
-        
-        recommender = ContentBasedRecommender()
-        recommender.fit(attractions_df)
-        print("Model ready!")
-        
-    except FileNotFoundError as e:
-        print(f"Error: Could not find attractions.csv - {e}")
-        print(f"Expected path: {data_path}")
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    data_path = os.path.join(BASE_DIR, 'data', 'processed', 'attractions.csv')
+    print("===== debug: BASE_DIR =", BASE_DIR)
+    print("===== debug: looking for CSV at", data_path)
+    print("===== debug: os.listdir(BASE_DIR) →", os.listdir(BASE_DIR))
+    print("===== debug: os.listdir(os.path.join(BASE_DIR, 'data')) →", os.listdir(os.path.join(BASE_DIR, 'data')))
+    print("===== debug: os.listdir(os.path.join(BASE_DIR, 'data', 'processed')) →", os.listdir(os.path.join(BASE_DIR, 'data', 'processed')))
+    if not os.path.exists(data_path):
+        print("ERROR: File does not exist on disk!")
         sys.exit(1)
-    except Exception as e:
-        print(f"Error initializing system: {e}")
-        sys.exit(1)
+    attractions_df = pd.read_csv(data_path)
+    print(f"Loaded {len(attractions_df)} attractions")
+    recommender = ContentBasedRecommender()
+    recommender.fit(attractions_df)
+    print("Model ready!")
 
 
 
