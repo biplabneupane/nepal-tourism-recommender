@@ -23,7 +23,7 @@ def initialize_system():
     
     print("Loading data and training model...")
     try:
-        attractions_df = pd.read_csv('data/processed/attractions.csv')
+        attractions_df = pd.read_csv('src/data/processed/attractions.csv')
         print(f"Loaded {len(attractions_df)} attractions")
         
         recommender = ContentBasedRecommender()
