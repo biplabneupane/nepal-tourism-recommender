@@ -9,6 +9,466 @@ def generate_attractions_data(num_attractions=50):
 
     print(f"  Generating {num_attractions} attractions...")
     
+    # Comprehensive mapping of attractions with correct region, category, and difficulty
+    attraction_mapping = {
+        # Famous treks
+        'Mount Everest Base Camp Trek': {
+            'region': 'Everest Region',
+            'category': 'Trekking',
+            'difficulty': 'Hard',
+            'duration': 12,
+            'cost_range': (1200, 1500),
+            'altitude_range': (4000, 5500),
+            'best_season': 'Spring'
+        },
+        'Annapurna Circuit': {
+            'region': 'Annapurna Region',
+            'category': 'Trekking',
+            'difficulty': 'Moderate-Hard',
+            'duration': 14,
+            'cost_range': (1000, 1400),
+            'altitude_range': (2000, 5400),
+            'best_season': 'Autumn'
+        },
+        'Langtang Trek': {
+            'region': 'Langtang Region',
+            'category': 'Trekking',
+            'difficulty': 'Moderate',
+            'duration': 8,
+            'cost_range': (800, 1100),
+            'altitude_range': (2000, 3800),
+            'best_season': 'Autumn'
+        },
+        'Manaslu Circuit': {
+            'region': 'Manaslu Region',
+            'category': 'Trekking',
+            'difficulty': 'Hard',
+            'duration': 18,
+            'cost_range': (1200, 1500),
+            'altitude_range': (2000, 5100),
+            'best_season': 'Spring'
+        },
+        'Upper Mustang Trek': {
+            'region': 'Mustang Region',
+            'category': 'Trekking',
+            'difficulty': 'Moderate-Hard',
+            'duration': 14,
+            'cost_range': (1000, 1400),
+            'altitude_range': (2500, 4200),
+            'best_season': 'Autumn'
+        },
+        'Gokyo Lakes Trek': {
+            'region': 'Everest Region',
+            'category': 'Trekking',
+            'difficulty': 'Hard',
+            'duration': 14,
+            'cost_range': (1200, 1500),
+            'altitude_range': (4000, 5400),
+            'best_season': 'Spring'
+        },
+        'Annapurna Base Camp': {
+            'region': 'Annapurna Region',
+            'category': 'Trekking',
+            'difficulty': 'Moderate-Hard',
+            'duration': 12,
+            'cost_range': (1000, 1400),
+            'altitude_range': (2000, 4100),
+            'best_season': 'Autumn'
+        },
+        'Ghandruk Village': {
+            'region': 'Annapurna Region',
+            'category': 'Trekking',
+            'difficulty': 'Moderate',
+            'duration': 4,
+            'cost_range': (300, 600),
+            'altitude_range': (2000, 2200),
+            'best_season': 'Autumn'
+        },
+        'Australian Camp': {
+            'region': 'Pokhara Region',
+            'category': 'Trekking',
+            'difficulty': 'Easy-Moderate',
+            'duration': 2,
+            'cost_range': (200, 400),
+            'altitude_range': (1500, 2000),
+            'best_season': 'Year-round'
+        },
+        'Dhulikhel': {
+            'region': 'Kathmandu Valley',
+            'category': 'Hill Station',
+            'difficulty': 'Easy',
+            'duration': 1,
+            'cost_range': (50, 150),
+            'altitude_range': (1500, 1600),
+            'best_season': 'Year-round'
+        },
+        
+        # Cultural sites
+        'Kathmandu Durbar Square': {
+            'region': 'Kathmandu Valley',
+            'category': 'Cultural Heritage',
+            'difficulty': 'Easy',
+            'duration': 1,
+            'cost_range': (20, 40),
+            'altitude_range': (1300, 1400),
+            'best_season': 'Year-round'
+        },
+        'Patan Durbar Square': {
+            'region': 'Kathmandu Valley',
+            'category': 'Cultural Heritage',
+            'difficulty': 'Easy',
+            'duration': 1,
+            'cost_range': (15, 35),
+            'altitude_range': (1300, 1400),
+            'best_season': 'Year-round'
+        },
+        'Bhaktapur Durbar Square': {
+            'region': 'Kathmandu Valley',
+            'category': 'Cultural Heritage',
+            'difficulty': 'Easy',
+            'duration': 1,
+            'cost_range': (15, 35),
+            'altitude_range': (1300, 1400),
+            'best_season': 'Year-round'
+        },
+        'Lukla Airport Experience': {
+            'region': 'Everest Region',
+            'category': 'Adventure Sports',
+            'difficulty': 'Moderate',
+            'duration': 1,
+            'cost_range': (100, 200),
+            'altitude_range': (2800, 2900),
+            'best_season': 'Year-round'
+        },
+        
+        # Religious sites
+        'Swayambhunath (Monkey Temple)': {
+            'region': 'Kathmandu Valley',
+            'category': 'Religious Site',
+            'difficulty': 'Easy',
+            'duration': 1,
+            'cost_range': (5, 15),
+            'altitude_range': (1300, 1400),
+            'best_season': 'Year-round'
+        },
+        'Boudhanath Stupa': {
+            'region': 'Kathmandu Valley',
+            'category': 'Religious Site',
+            'difficulty': 'Easy',
+            'duration': 1,
+            'cost_range': (5, 15),
+            'altitude_range': (1300, 1400),
+            'best_season': 'Year-round'
+        },
+        'Pashupatinath Temple': {
+            'region': 'Kathmandu Valley',
+            'category': 'Religious Site',
+            'difficulty': 'Easy',
+            'duration': 1,
+            'cost_range': (5, 20),
+            'altitude_range': (1300, 1400),
+            'best_season': 'Year-round'
+        },
+        'Lumbini (Buddha Birthplace)': {
+            'region': 'Lumbini',
+            'category': 'Religious Site',
+            'difficulty': 'Easy',
+            'duration': 1,
+            'cost_range': (5, 20),
+            'altitude_range': (100, 200),
+            'best_season': 'Year-round'
+        },
+        'Muktinath Temple': {
+            'region': 'Mustang Region',
+            'category': 'Religious Site',
+            'difficulty': 'Easy',
+            'duration': 1,
+            'cost_range': (5, 15),
+            'altitude_range': (3700, 3800),
+            'best_season': 'Year-round'
+        },
+        'Tengboche Monastery': {
+            'region': 'Everest Region',
+            'category': 'Religious Site',
+            'difficulty': 'Easy',
+            'duration': 1,
+            'cost_range': (5, 15),
+            'altitude_range': (3800, 3900),
+            'best_season': 'Year-round'
+        },
+        'Tal Barahi Temple': {
+            'region': 'Pokhara Region',
+            'category': 'Religious Site',
+            'difficulty': 'Easy',
+            'duration': 1,
+            'cost_range': (5, 15),
+            'altitude_range': (800, 900),
+            'best_season': 'Year-round'
+        },
+        'Janakpur Temple': {
+            'region': 'Lumbini',
+            'category': 'Religious Site',
+            'difficulty': 'Easy',
+            'duration': 1,
+            'cost_range': (5, 20),
+            'altitude_range': (100, 200),
+            'best_season': 'Year-round'
+        },
+        'Kopan Monastery': {
+            'region': 'Kathmandu Valley',
+            'category': 'Religious Site',
+            'difficulty': 'Easy',
+            'duration': 1,
+            'cost_range': (5, 15),
+            'altitude_range': (1300, 1400),
+            'best_season': 'Year-round'
+        },
+        
+        # Natural attractions
+        'Pokhara Lakeside': {
+            'region': 'Pokhara Region',
+            'category': 'Nature & Wildlife',
+            'difficulty': 'Easy',
+            'duration': 2,
+            'cost_range': (100, 250),
+            'altitude_range': (800, 900),
+            'best_season': 'Year-round'
+        },
+        'Chitwan National Park': {
+            'region': 'Chitwan',
+            'category': 'Nature & Wildlife',
+            'difficulty': 'Easy-Moderate',
+            'duration': 3,
+            'cost_range': (200, 500),
+            'altitude_range': (100, 200),
+            'best_season': 'Winter'
+        },
+        'Rara Lake': {
+            'region': 'Far West Nepal',
+            'category': 'Nature & Wildlife',
+            'difficulty': 'Moderate-Hard',
+            'duration': 7,
+            'cost_range': (400, 800),
+            'altitude_range': (2900, 3000),
+            'best_season': 'Autumn'
+        },
+        'Phewa Lake': {
+            'region': 'Pokhara Region',
+            'category': 'Nature & Wildlife',
+            'difficulty': 'Easy',
+            'duration': 1,
+            'cost_range': (50, 150),
+            'altitude_range': (800, 900),
+            'best_season': 'Year-round'
+        },
+        'Begnas Lake': {
+            'region': 'Pokhara Region',
+            'category': 'Nature & Wildlife',
+            'difficulty': 'Easy',
+            'duration': 1,
+            'cost_range': (50, 150),
+            'altitude_range': (600, 700),
+            'best_season': 'Year-round'
+        },
+        'Gosaikunda Lake': {
+            'region': 'Langtang Region',
+            'category': 'Nature & Wildlife',
+            'difficulty': 'Moderate-Hard',
+            'duration': 4,
+            'cost_range': (300, 600),
+            'altitude_range': (4000, 4400),
+            'best_season': 'Summer'
+        },
+        'Tilicho Lake': {
+            'region': 'Annapurna Region',
+            'category': 'Nature & Wildlife',
+            'difficulty': 'Hard',
+            'duration': 8,
+            'cost_range': (600, 1000),
+            'altitude_range': (4800, 5000),
+            'best_season': 'Autumn'
+        },
+        'Bardiya National Park': {
+            'region': 'Far West Nepal',
+            'category': 'Nature & Wildlife',
+            'difficulty': 'Easy-Moderate',
+            'duration': 3,
+            'cost_range': (200, 500),
+            'altitude_range': (100, 200),
+            'best_season': 'Winter'
+        },
+        'Koshi Tappu Wildlife Reserve': {
+            'region': 'Lumbini',
+            'category': 'Nature & Wildlife',
+            'difficulty': 'Easy',
+            'duration': 2,
+            'cost_range': (100, 300),
+            'altitude_range': (100, 200),
+            'best_season': 'Winter'
+        },
+        'Seti River Gorge': {
+            'region': 'Pokhara Region',
+            'category': 'Nature & Wildlife',
+            'difficulty': 'Easy',
+            'duration': 1,
+            'cost_range': (50, 150),
+            'altitude_range': (800, 900),
+            'best_season': 'Year-round'
+        },
+        
+        # Hill stations
+        'Nagarkot Hill Station': {
+            'region': 'Kathmandu Valley',
+            'category': 'Hill Station',
+            'difficulty': 'Easy',
+            'duration': 1,
+            'cost_range': (50, 150),
+            'altitude_range': (2100, 2200),
+            'best_season': 'Year-round'
+        },
+        'Bandipur Village': {
+            'region': 'Pokhara Region',
+            'category': 'Hill Station',
+            'difficulty': 'Easy',
+            'duration': 1,
+            'cost_range': (50, 200),
+            'altitude_range': (1000, 1100),
+            'best_season': 'Year-round'
+        },
+        'Sarangkot Sunrise Point': {
+            'region': 'Pokhara Region',
+            'category': 'Hill Station',
+            'difficulty': 'Easy-Moderate',
+            'duration': 1,
+            'cost_range': (50, 150),
+            'altitude_range': (1500, 1600),
+            'best_season': 'Year-round'
+        },
+        
+        # Adventure
+        'Bungee Jumping (The Last Resort)': {
+            'region': 'Kathmandu Valley',
+            'category': 'Adventure Sports',
+            'difficulty': 'Hard',
+            'duration': 1,
+            'cost_range': (80, 120),
+            'altitude_range': (100, 200),
+            'best_season': 'Year-round'
+        },
+        'Paragliding in Pokhara': {
+            'region': 'Pokhara Region',
+            'category': 'Adventure Sports',
+            'difficulty': 'Moderate',
+            'duration': 1,
+            'cost_range': (80, 150),
+            'altitude_range': (800, 900),
+            'best_season': 'Year-round'
+        },
+        'White Water Rafting Trishuli': {
+            'region': 'Kathmandu Valley',
+            'category': 'Adventure Sports',
+            'difficulty': 'Moderate',
+            'duration': 1,
+            'cost_range': (50, 100),
+            'altitude_range': (500, 600),
+            'best_season': 'Year-round'
+        },
+        'Poon Hill Sunrise': {
+            'region': 'Annapurna Region',
+            'category': 'Adventure Sports',
+            'difficulty': 'Easy-Moderate',
+            'duration': 1,
+            'cost_range': (50, 150),
+            'altitude_range': (3100, 3200),
+            'best_season': 'Spring'
+        },
+        'World Peace Pagoda': {
+            'region': 'Pokhara Region',
+            'category': 'Adventure Sports',
+            'difficulty': 'Easy-Moderate',
+            'duration': 1,
+            'cost_range': (50, 100),
+            'altitude_range': (1100, 1200),
+            'best_season': 'Year-round'
+        },
+        
+        # Markets and shopping
+        'Namche Bazaar Market': {
+            'region': 'Everest Region',
+            'category': 'Market/Shopping',
+            'difficulty': 'Easy',
+            'duration': 0.5,
+            'cost_range': (20, 100),
+            'altitude_range': (3400, 3500),
+            'best_season': 'Year-round'
+        },
+        'Khumjung Village': {
+            'region': 'Everest Region',
+            'category': 'Market/Shopping',
+            'difficulty': 'Easy',
+            'duration': 0.5,
+            'cost_range': (20, 80),
+            'altitude_range': (3700, 3800),
+            'best_season': 'Year-round'
+        },
+        'Jomsom Town': {
+            'region': 'Mustang Region',
+            'category': 'Market/Shopping',
+            'difficulty': 'Easy',
+            'duration': 0.5,
+            'cost_range': (20, 100),
+            'altitude_range': (2700, 2800),
+            'best_season': 'Year-round'
+        },
+        'Thamel Market': {
+            'region': 'Kathmandu Valley',
+            'category': 'Market/Shopping',
+            'difficulty': 'Easy',
+            'duration': 0.5,
+            'cost_range': (20, 100),
+            'altitude_range': (1300, 1400),
+            'best_season': 'Year-round'
+        },
+        
+        # Other attractions
+        'Everest View Hotel': {
+            'region': 'Everest Region',
+            'category': 'Nature & Wildlife',
+            'difficulty': 'Easy',
+            'duration': 1,
+            'cost_range': (100, 200),
+            'altitude_range': (3800, 3900),
+            'best_season': 'Year-round'
+        },
+        'Kagbeni Village': {
+            'region': 'Mustang Region',
+            'category': 'Nature & Wildlife',
+            'difficulty': 'Easy',
+            'duration': 1,
+            'cost_range': (50, 150),
+            'altitude_range': (2800, 2900),
+            'best_season': 'Year-round'
+        },
+        'Mahendra Cave': {
+            'region': 'Pokhara Region',
+            'category': 'Nature & Wildlife',
+            'difficulty': 'Easy',
+            'duration': 1,
+            'cost_range': (20, 50),
+            'altitude_range': (800, 900),
+            'best_season': 'Year-round'
+        },
+        'Garden of Dreams': {
+            'region': 'Kathmandu Valley',
+            'category': 'Nature & Wildlife',
+            'difficulty': 'Easy',
+            'duration': 1,
+            'cost_range': (10, 30),
+            'altitude_range': (1300, 1400),
+            'best_season': 'Year-round'
+        },
+    }
+    
     # Real Nepal destinations (base list)
     base_attractions = [
         # Famous treks
@@ -84,90 +544,107 @@ def generate_attractions_data(num_attractions=50):
     # Only using the needed number
     selected_attractions = all_attractions[:num_attractions]
     
-    # Possible categories
-    categories = [
-        'Trekking', 
-        'Cultural Heritage', 
-        'Nature & Wildlife', 
-        'Religious Site', 
-        'Adventure Sports', 
-        'Hill Station', 
-        'Market/Shopping',
-        'Lake',
-        'Historical Site'
-    ]
-    
-    regions = [
-        'Kathmandu Valley',
-        'Pokhara Region',
-        'Everest Region',
-        'Annapurna Region',
-        'Chitwan',
-        'Lumbini',
-        'Far West Nepal',
-        'Langtang Region',
-        'Manaslu Region',
-        'Mustang Region'
-    ]
-    
-    
     difficulties = ['Easy', 'Easy-Moderate', 'Moderate', 'Moderate-Hard', 'Hard', 'Extreme']
-    
-    seasons = ['Spring', 'Summer', 'Autumn', 'Winter', 'Year-round']
     
     attractions = []
     
     for i, name in enumerate(selected_attractions):
         
-        if any(word in name.lower() for word in ['trek', 'circuit', 'base camp', 'hike']):
-            category = 'Trekking'
-            difficulty = np.random.choice(['Moderate', 'Moderate-Hard', 'Hard', 'Extreme'])
-            duration = np.random.randint(7, 21)
-            cost = np.random.randint(500, 1500)
-            best_season = np.random.choice(['Spring', 'Autumn'])
-            
-        elif any(word in name.lower() for word in ['temple', 'stupa', 'monastery', 'lumbini']):
-            category = 'Religious Site'
-            difficulty = 'Easy'
-            duration = 1
-            cost = np.random.randint(10, 50)
-            best_season = 'Year-round'
-            
-        elif any(word in name.lower() for word in ['lake', 'river', 'waterfall']):
-            category = 'Nature & Wildlife'
-            difficulty = np.random.choice(['Easy', 'Moderate', 'Hard'])
-            duration = np.random.randint(1, 7)
-            cost = np.random.randint(50, 400)
-            best_season = np.random.choice(['Spring', 'Summer', 'Autumn'])
-            
-        elif any(word in name.lower() for word in ['durbar square', 'palace', 'historic']):
-            category = 'Cultural Heritage'
-            difficulty = 'Easy'
-            duration = 1
-            cost = np.random.randint(15, 40)
-            best_season = 'Year-round'
-            
-        elif any(word in name.lower() for word in ['paragliding', 'bungee', 'rafting']):
-            category = 'Adventure Sports'
-            difficulty = np.random.choice(['Moderate', 'Hard'])
-            duration = 1
-            cost = np.random.randint(80, 200)
-            best_season = np.random.choice(['Spring', 'Autumn', 'Year-round'])
-            
-        elif any(word in name.lower() for word in ['market', 'bazaar', 'shopping']):
-            category = 'Market/Shopping'
-            difficulty = 'Easy'
-            duration = 0.5
-            cost = np.random.randint(20, 100)
-            best_season = 'Year-round'
-            
+        # Check if we have a specific mapping for this attraction
+        if name in attraction_mapping:
+            mapping = attraction_mapping[name]
+            region = mapping['region']
+            category = mapping['category']
+            difficulty = mapping['difficulty']
+            duration = mapping['duration']
+            cost = np.random.randint(mapping['cost_range'][0], mapping['cost_range'][1])
+            altitude = np.random.randint(mapping['altitude_range'][0], mapping['altitude_range'][1])
+            best_season = mapping['best_season']
         else:
-            category = np.random.choice(categories)
-            difficulty = np.random.choice(difficulties)
-            duration = np.random.randint(1, 14)
-            cost = np.random.randint(50, 1000)
-            best_season = np.random.choice(seasons)
-        
+            # Fallback to generic logic for unmapped attractions
+            if any(word in name.lower() for word in ['trek', 'circuit', 'base camp', 'hike']):
+                category = 'Trekking'
+                difficulty = np.random.choice(['Moderate', 'Moderate-Hard', 'Hard', 'Extreme'])
+                duration = np.random.randint(7, 21)
+                cost = np.random.randint(500, 1500)
+                best_season = np.random.choice(['Spring', 'Autumn'])
+                altitude = np.random.randint(2000, 4500)
+                
+            elif any(word in name.lower() for word in ['temple', 'stupa', 'monastery', 'lumbini']):
+                category = 'Religious Site'
+                difficulty = 'Easy'
+                duration = 1
+                cost = np.random.randint(10, 50)
+                best_season = 'Year-round'
+                altitude = np.random.randint(500, 2000)
+                
+            elif any(word in name.lower() for word in ['lake', 'river', 'waterfall']):
+                category = 'Nature & Wildlife'
+                difficulty = np.random.choice(['Easy', 'Moderate', 'Hard'])
+                duration = np.random.randint(1, 7)
+                cost = np.random.randint(50, 400)
+                best_season = np.random.choice(['Spring', 'Summer', 'Autumn'])
+                altitude = np.random.randint(500, 2000)
+                
+            elif any(word in name.lower() for word in ['durbar square', 'palace', 'historic']):
+                category = 'Cultural Heritage'
+                difficulty = 'Easy'
+                duration = 1
+                cost = np.random.randint(15, 40)
+                best_season = 'Year-round'
+                altitude = np.random.randint(500, 2000)
+                
+            elif any(word in name.lower() for word in ['paragliding', 'bungee', 'rafting']):
+                category = 'Adventure Sports'
+                difficulty = np.random.choice(['Moderate', 'Hard'])
+                duration = 1
+                cost = np.random.randint(80, 200)
+                best_season = np.random.choice(['Spring', 'Autumn', 'Year-round'])
+                altitude = np.random.randint(500, 2000)
+                
+            elif any(word in name.lower() for word in ['market', 'bazaar', 'shopping']):
+                category = 'Market/Shopping'
+                difficulty = 'Easy'
+                duration = 0.5
+                cost = np.random.randint(20, 100)
+                best_season = 'Year-round'
+                altitude = np.random.randint(500, 2000)
+                
+            else:
+                category = np.random.choice(['Trekking', 'Cultural Heritage', 'Nature & Wildlife', 
+                                            'Religious Site', 'Adventure Sports', 'Hill Station', 
+                                            'Market/Shopping', 'Lake', 'Historical Site'])
+                difficulty = np.random.choice(difficulties)
+                duration = np.random.randint(1, 14)
+                cost = np.random.randint(50, 1000)
+                best_season = np.random.choice(['Spring', 'Summer', 'Autumn', 'Winter', 'Year-round'])
+                altitude = np.random.randint(500, 2000)
+            
+            # Assign region based on name (fallback)
+            if 'everest' in name.lower() or 'khumbu' in name.lower() or 'namche' in name.lower() or 'tengboche' in name.lower() or 'lukla' in name.lower():
+                region = 'Everest Region'
+            elif 'annapurna' in name.lower() or 'poon hill' in name.lower() or 'ghandruk' in name.lower():
+                region = 'Annapurna Region'
+            elif 'pokhara' in name.lower() or 'sarangkot' in name.lower() or 'world peace' in name.lower() or 'mahendra' in name.lower() or 'tal barahi' in name.lower():
+                region = 'Pokhara Region'
+            elif 'kathmandu' in name.lower() or 'patan' in name.lower() or 'bhaktapur' in name.lower() or 'swayambhunath' in name.lower() or 'boudhanath' in name.lower() or 'pashupatinath' in name.lower() or 'garden of dreams' in name.lower() or 'thamel' in name.lower() or 'kopan' in name.lower() or 'nagarkot' in name.lower() or 'dhulikhel' in name.lower():
+                region = 'Kathmandu Valley'
+            elif 'langtang' in name.lower() or 'gosaikunda' in name.lower():
+                region = 'Langtang Region'
+            elif 'mustang' in name.lower() or 'muktinath' in name.lower() or 'kagbeni' in name.lower() or 'jomsom' in name.lower():
+                region = 'Mustang Region'
+            elif 'manaslu' in name.lower():
+                region = 'Manaslu Region'
+            elif 'chitwan' in name.lower():
+                region = 'Chitwan'
+            elif 'lumbini' in name.lower() or 'janakpur' in name.lower() or 'koshi tappu' in name.lower():
+                region = 'Lumbini'
+            elif 'rara' in name.lower() or 'bardiya' in name.lower():
+                region = 'Far West Nepal'
+            else:
+                region = np.random.choice(['Kathmandu Valley', 'Pokhara Region', 'Everest Region', 
+                                         'Annapurna Region', 'Chitwan', 'Lumbini', 'Far West Nepal',
+                                         'Langtang Region', 'Manaslu Region', 'Mustang Region'])
         
         # Beta distribution with parameters (8,2) gives us ratings mostly between 3.5-5.0
         rating = np.random.beta(8, 2) * 5
@@ -178,30 +655,6 @@ def generate_attractions_data(num_attractions=50):
         # Exponential distribution gives realistic distribution (few very popular, many moderately popular)
         num_reviews = int(np.random.exponential(400) + 50)
         num_reviews = min(num_reviews, 5000)  # Cap at 5000 reviews
-        
-        # Altitude (meters above sea level)
-        if 'everest' in name.lower():
-            altitude = np.random.randint(4000, 5500)
-        elif category == 'Trekking':
-            altitude = np.random.randint(2000, 4500)
-        else:
-            altitude = np.random.randint(500, 2000)
-        
-        # Assign region based on name
-        if 'everest' in name.lower() or 'khumbu' in name.lower():
-            region = 'Everest Region'
-        elif 'annapurna' in name.lower() or 'pokhara' in name.lower():
-            region = 'Annapurna Region'
-        elif 'kathmandu' in name.lower() or 'patan' in name.lower() or 'bhaktapur' in name.lower():
-            region = 'Kathmandu Valley'
-        elif 'langtang' in name.lower():
-            region = 'Langtang Region'
-        elif 'mustang' in name.lower():
-            region = 'Mustang Region'
-        elif 'chitwan' in name.lower():
-            region = 'Chitwan'
-        else:
-            region = np.random.choice(regions)
         
         # Create description
         description = f"A {difficulty.lower()} {category.lower()} experience in {region}."
