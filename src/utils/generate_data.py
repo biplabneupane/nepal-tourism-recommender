@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 np.random.seed(42)
 
 
-def generate_attractions_data(num_attractions=50):
+def generate_attractions_data(num_attractions=None):
 
     print(f"  Generating {num_attractions} attractions...")
     
@@ -103,7 +103,7 @@ def generate_attractions_data(num_attractions=50):
             'best_season': 'Year-round'
         },
         
-        # Cultural sites
+        # Cultural sitesgit s
         'Kathmandu Durbar Square': {
             'region': 'Kathmandu Valley',
             'category': 'Cultural Heritage',
@@ -467,6 +467,115 @@ def generate_attractions_data(num_attractions=50):
             'altitude_range': (1300, 1400),
             'best_season': 'Year-round'
         },
+        # New additions across Nepal
+        'Shuklaphanta National Park': {
+            'region': 'Far West Nepal',
+            'category': 'Nature & Wildlife',
+            'difficulty': 'Easy-Moderate',
+            'duration': 3,
+            'cost_range': (200, 500),
+            'altitude_range': (100, 200),
+            'best_season': 'Winter'
+        },
+        'Shey Phoksundo Lake Trek': {
+            'region': 'Far West Nepal',
+            'category': 'Trekking',
+            'difficulty': 'Moderate-Hard',
+            'duration': 9,
+            'cost_range': (800, 1300),
+            'altitude_range': (3000, 5200),
+            'best_season': 'Autumn'
+        },
+        'Khaptad National Park': {
+            'region': 'Far West Nepal',
+            'category': 'Nature & Wildlife',
+            'difficulty': 'Easy-Moderate',
+            'duration': 2,
+            'cost_range': (150, 400),
+            'altitude_range': (2600, 3100),
+            'best_season': 'Spring'
+        },
+        'Mardi Himal Trek': {
+            'region': 'Annapurna Region',
+            'category': 'Trekking',
+            'difficulty': 'Moderate-Hard',
+            'duration': 7,
+            'cost_range': (700, 1100),
+            'altitude_range': (2000, 4500),
+            'best_season': 'Autumn'
+        },
+        'Langtang Valley Trek': {
+            'region': 'Langtang Region',
+            'category': 'Trekking',
+            'difficulty': 'Moderate',
+            'duration': 7,
+            'cost_range': (600, 1000),
+            'altitude_range': (2000, 4800),
+            'best_season': 'Autumn'
+        },
+        'Ghale Gaun Homestay': {
+            'region': 'Annapurna Region',
+            'category': 'Cultural Heritage',
+            'difficulty': 'Easy-Moderate',
+            'duration': 2,
+            'cost_range': (150, 350),
+            'altitude_range': (2000, 2100),
+            'best_season': 'Autumn'
+        },
+        'Lumbini Monastic Zone': {
+            'region': 'Lumbini',
+            'category': 'Religious Site',
+            'difficulty': 'Easy',
+            'duration': 1,
+            'cost_range': (5, 20),
+            'altitude_range': (100, 200),
+            'best_season': 'Year-round'
+        },
+        'Chandragiri Cable Car': {
+            'region': 'Kathmandu Valley',
+            'category': 'Adventure Sports',
+            'difficulty': 'Easy',
+            'duration': 1,
+            'cost_range': (20, 60),
+            'altitude_range': (2000, 2600),
+            'best_season': 'Year-round'
+        },
+        'Kalinchowk Bhagwati Temple': {
+            'region': 'Kathmandu Valley',
+            'category': 'Religious Site',
+            'difficulty': 'Moderate',
+            'duration': 2,
+            'cost_range': (20, 80),
+            'altitude_range': (3400, 3800),
+            'best_season': 'Winter'
+        },
+        'Barun Valley Trek': {
+            'region': 'Everest Region',
+            'category': 'Trekking',
+            'difficulty': 'Hard',
+            'duration': 10,
+            'cost_range': (900, 1400),
+            'altitude_range': (2000, 5000),
+            'best_season': 'Autumn'
+        },
+        'Pikey Peak Trek': {
+            'region': 'Everest Region',
+            'category': 'Trekking',
+            'difficulty': 'Moderate',
+            'duration': 6,
+            'cost_range': (500, 900),
+            'altitude_range': (3000, 4100),
+            'best_season': 'Autumn'
+        },
+        'Tsho Rolpa Lake': {
+            'region': 'Langtang Region',
+            'category': 'Nature & Wildlife',
+            'difficulty': 'Hard',
+            'duration': 6,
+            'cost_range': (500, 900),
+            'altitude_range': (4500, 4800),
+            'best_season': 'Autumn'
+        },
     }
     
     # Real Nepal destinations (base list)
@@ -536,12 +645,27 @@ def generate_attractions_data(num_attractions=50):
         'Tal Barahi Temple',
         'Garden of Dreams',
         'Thamel Market',
-        'Kopan Monastery'
+        'Kopan Monastery',
+        # New additions to broaden coverage across Nepal
+        'Shuklaphanta National Park',
+        'Shey Phoksundo Lake Trek',
+        'Khaptad National Park',
+        'Mardi Himal Trek',
+        'Langtang Valley Trek',
+        'Ghale Gaun Homestay',
+        'Lumbini Monastic Zone',
+        'Chandragiri Cable Car',
+        'Kalinchowk Bhagwati Temple',
+        'Barun Valley Trek',
+        'Pikey Peak Trek',
+        'Tsho Rolpa Lake'
     ]
     
     all_attractions = base_attractions + additional_names
     
-    # Only using the needed number
+    # Default: use all available attractions unless capped
+    if num_attractions is None or num_attractions > len(all_attractions):
+        num_attractions = len(all_attractions)
     selected_attractions = all_attractions[:num_attractions]
     
     difficulties = ['Easy', 'Easy-Moderate', 'Moderate', 'Moderate-Hard', 'Hard', 'Extreme']
@@ -771,7 +895,7 @@ def main():
     print("="*60 + "\n")
     
     # Generate all three datasets
-    attractions_df = generate_attractions_data(num_attractions=50)
+    attractions_df = generate_attractions_data()
     ratings_df = generate_user_ratings(attractions_df, num_users=200)
     users_df = generate_user_preferences(num_users=200)
     

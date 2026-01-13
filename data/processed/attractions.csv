@@ -48,3 +48,15 @@ attraction_id,name,category,region,rating,num_reviews,avg_cost_usd,duration_days
 46,Garden of Dreams,Nature & Wildlife,Kathmandu Valley,3.0,99,91,1,Easy,Year-round,1087,A easy nature & wildlife experience in Kathmandu Valley.
 47,Thamel Market,Market/Shopping,Kathmandu Valley,4.1,150,93,0.5,Easy,Year-round,1916,A easy market/shopping experience in Kathmandu Valley.
 48,Kopan Monastery,Religious Site,Kathmandu Valley,3.8,237,36,1,Easy,Year-round,1865,A easy religious site experience in Kathmandu Valley.
+49,Shuklaphanta National Park,Nature & Wildlife,Far West Nepal,4.1,210,320,3,Easy-Moderate,Winter,150,A easy-moderate nature & wildlife experience in Far West Nepal.
+50,Shey Phoksundo Lake Trek,Trekking,Far West Nepal,4.5,480,1100,9,Moderate-Hard,Autumn,4500,A moderate-hard trekking experience in Far West Nepal.
+51,Khaptad National Park,Nature & Wildlife,Far West Nepal,4.0,190,260,2,Easy-Moderate,Spring,2800,A easy-moderate nature & wildlife experience in Far West Nepal.
+52,Mardi Himal Trek,Trekking,Annapurna Region,4.4,520,900,7,Moderate-Hard,Autumn,4300,A moderate-hard trekking experience in Annapurna Region.
+53,Langtang Valley Trek,Trekking,Langtang Region,4.3,410,850,7,Moderate,Autumn,4300,A moderate trekking experience in Langtang Region.
+54,Ghale Gaun Homestay,Cultural Heritage,Annapurna Region,4.2,150,250,2,Easy-Moderate,Autumn,2050,A easy-moderate cultural heritage experience in Annapurna Region.
+55,Lumbini Monastic Zone,Religious Site,Lumbini,4.4,390,25,1,Easy,Year-round,120,A easy religious site experience in Lumbini.
+56,Chandragiri Cable Car,Adventure Sports,Kathmandu Valley,4.1,620,50,1,Easy,Year-round,2400,A easy adventure sports experience in Kathmandu Valley.
+57,Kalinchowk Bhagwati Temple,Religious Site,Kathmandu Valley,4.3,275,60,2,Moderate,Winter,3600,A moderate religious site experience in Kathmandu Valley.
+58,Barun Valley Trek,Trekking,Everest Region,4.5,260,1200,10,Hard,Autumn,4800,A hard trekking experience in Everest Region.
+59,Pikey Peak Trek,Trekking,Everest Region,4.2,310,750,6,Moderate,Autumn,4065,A moderate trekking experience in Everest Region.
+60,Tsho Rolpa Lake,Nature & Wildlife,Langtang Region,4.1,230,650,6,Hard,Autumn,4580,A hard nature & wildlife experience in Langtang Region.
