@@ -98,7 +98,8 @@ class ContentBasedRecommender:
         
         return recommendations[[
             'attraction_id', 'name', 'category', 'region', 
-            'rating', 'avg_cost_usd', 'similarity_score'
+            'rating', 'num_reviews', 'avg_cost_usd', 'duration_days',
+            'difficulty', 'best_season', 'altitude_meters', 'similarity_score'
         ]]
     
     def recommend_by_preferences(self, preferred_category=None, 
@@ -136,7 +137,8 @@ class ContentBasedRecommender:
         
         return recommendations[[
             'attraction_id', 'name', 'category', 'region', 
-            'rating', 'avg_cost_usd', 'duration_days', 'difficulty'
+            'rating', 'num_reviews', 'avg_cost_usd', 'duration_days', 
+            'difficulty', 'best_season', 'altitude_meters'
         ]]
 
 
