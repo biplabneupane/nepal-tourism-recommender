@@ -6,6 +6,11 @@ __pycache__/
 .env
 *.db
 demo.py
+SETUP.md
+requirements.txt
+DATABASE_SETUP.md
+EMAIL_SETUP.md
+config.py
 
 templates/ndex.html
 # static/

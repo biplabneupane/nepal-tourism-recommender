@@ -8,16 +8,42 @@ The Nepal Tourism Recommender is a content-based recommendation system designed 
 
 ## Features
 
+### Recommendation System
 - Content-based recommendation of tourist destinations
-- Filtering based on user preferences
-- Interactive web interface
-- End-to-end integration of machine learning and web application logic
+- Filtering based on user preferences (category, budget, difficulty)
+- Similarity-based recommendations ("Find Similar")
+- Preference-based recommendations
+- **Explainability**: See why each recommendation was made
+
+### Enhanced User Experience
+- **Enhanced recommendation cards** with:
+  - Best time to visit
+  - Typical trip duration
+  - Ideal traveler type
+  - Estimated total trip cost
+  - Detailed difficulty explanations
+- **Trip itinerary generation**: Create multi-day trip plans
+- **Preference memory**: System remembers your preferences across sessions
+
+### Conversion & Lead Management
+- **Email integration**: Send itineraries directly to users
+- **Expert consultation**: Connect users with local travel experts
+- **Quote requests**: Request customized pricing
+- **Database storage**: All leads and preferences stored persistently
+- **Admin dashboard**: View and manage leads via API
+
+### Analytics
+- Track recommendation clicks
+- Monitor conversions
+- Analyze user preferences
 
 ## Tech Stack
 
 **Backend**
 - Python
 - Flask
+- Flask-SQLAlchemy (Database)
+- Flask-Mail (Email)
 
 **Machine Learning**
 - pandas
@@ -27,7 +53,11 @@ The Nepal Tourism Recommender is a content-based recommendation system designed 
 **Frontend**
 - HTML
 - CSS
-- JavaScript
+- JavaScript (with localStorage for client-side caching)
+
+**Database**
+- SQLite (development)
+- PostgreSQL compatible (production)
 
 
 ## Methodology

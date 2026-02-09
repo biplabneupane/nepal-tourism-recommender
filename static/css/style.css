@@ -401,6 +401,167 @@ body {
     margin: 0.3rem 0;
 }
 
+/* Enhanced Card Styles */
+.enhanced-card {
+    position: relative;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.itinerary-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.itinerary-checkbox input[type="checkbox"] {
+    width: auto;
+    cursor: pointer;
+}
+
+.enhanced-section {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    border-left: 4px solid #667eea;
+}
+
+.info-row.highlight {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.highlight-value {
+    font-weight: 600;
+    color: #667eea;
+}
+
+.difficulty-explanation {
+    background: #fff3cd;
+    padding: 0.8rem;
+    border-radius: 5px;
+    margin: 0.5rem 0;
+    border-left: 4px solid #ffc107;
+}
+
+.difficulty-text {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #856404;
+}
+
+.explanation-section {
+    margin: 1rem 0;
+}
+
+.btn-explanation {
+    background: #e3f2fd;
+    border: 1px solid #2196F3;
+    color: #1976D2;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn-explanation:hover {
+    background: #bbdefb;
+}
+
+.explanation-content {
+    margin-top: 0.5rem;
+}
+
+.conversion-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-conversion {
+    flex: 1;
+    min-width: 120px;
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.btn-email {
+    background: #4CAF50;
+    color: white;
+}
+
+.btn-email:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-expert {
+    background: #2196F3;
+    color: white;
+}
+
+.btn-expert:hover {
+    background: #0b7dda;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-quote {
+    background: #ff9800;
+    color: white;
+}
+
+.btn-quote:hover {
+    background: #e68900;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.itinerary-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.itinerary-section h3 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.itinerary-display {
+    animation: fadeIn 0.5s ease;
+}
+
+.itinerary-day {
+    transition: all 0.3s ease;
+}
+
+.itinerary-day:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transform: translateY(-2px);
+}
+
+.itinerary-summary {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .header h1 {
@@ -417,5 +578,18 @@ body {
     
     .filters {
         grid-template-columns: 1fr;
+    }
+    
+    .conversion-buttons {
+        flex-direction: column;
+    }
+    
+    .btn-conversion {
+        width: 100%;
+    }
+    
+    .card-header {
+        flex-direction: column;
+        gap: 0.5rem;
     }
 }
